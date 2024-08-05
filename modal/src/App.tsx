@@ -3,7 +3,7 @@ import Modal from './lib/modal/index';
 import { useModal } from './lib/modal/ModalContext';
 
 export default function App() {
-    const { openModalId, handleShowModal, handleCloseModal, handleBgColor, handleMaxSize } = useModal();
+    const { openModalId, handleShowModal, handleBgColor, handleMaxSize } = useModal();
 
     useEffect(() => {
         handleBgColor('#4285f4');
@@ -21,9 +21,7 @@ export default function App() {
                 Show Modal 2
             </button>
 
-            <Modal id='modal1' isOpen={openModalId === 'modal1'} onClose={handleCloseModal}>
-                <p>안녕하세요</p>
-                <p>안녕하세요</p>
+            <Modal id='modal1' isOpen={openModalId === 'modal1'}>
                 <p>안녕하세요</p>
                 <p>안녕하세요</p>
                 <p>안녕하세요</p>
@@ -49,7 +47,7 @@ export default function App() {
                 <p>안녕하세요</p>
                 <img src='/1.png' alt='png' />
             </Modal>
-            <Modal id='modal2' isOpen={openModalId === 'modal2'} onClose={handleCloseModal}></Modal>
+            <Modal id='modal2' isOpen={openModalId === 'modal2'}></Modal>
         </div>
     );
 }

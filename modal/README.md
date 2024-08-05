@@ -2,14 +2,15 @@
 
 ![image](https://github.com/user-attachments/assets/9494bfdf-5f98-43f3-bc40-a6c6cddd5473)
 
-This package is a "Super easy Modal Sheet" component made by [AngelPlayer](https://github.com/ssh5212/npm-react-modal-sheet).
+This package is a "Super Easy Modal Sheet" Component for React.
 
-It works in React and supports both JavaScript and TypeScript.
-<br/><br/><br/>
+This package created by [AngelPlayer](https://angelplayer.tistory.com/)
+
+<br/><br/>
 
 ## 1. Install
 
-```
+```bash
 $ npm i @angelplayer/react-modal-sheet
 ```
 
@@ -60,15 +61,15 @@ function App() {
                 </button>
             </div>
 
-            <Modal id='id_greet' isOpen={openModalId === 'id_greet'} onClose={handleCloseModal}>
+            <Modal id='id_greet' isOpen={openModalId === 'id_greet'}>
                 <h1>World Greetings</h1>
                 <img src='/greet.jpg' alt='greet' />
                 <p>Konichiwa! (English)</p>
-                <p>Ahoy! (Japanese)</p>
+                <p>Nyahallo! (Japanese)</p>
                 <p>Kikiriki! (German)</p>
             </Modal>
 
-            <Modal id='id_thank' isOpen={openModalId === 'id_thank'} onClose={handleCloseModal}>
+            <Modal id='id_thank' isOpen={openModalId === 'id_thank'}>
                 <h1>World Thanks</h1>
                 <img src='/thank.jpg' alt='greet' />
                 <p>Thank you! (English)</p>
@@ -96,12 +97,12 @@ export default App;
 ```
 
 All you need to do to prepare for using the functionality is to wrap the App with a ModalProvider.
-<br/><br/>
+<br/><br/><br/>
 
 ### 2) "Modal" Component
 
 ```tsx
-<Modal id='YOUR_ID' isOpen={openModalId === 'YOUR_ID'} onClose={handleCloseModal}>
+<Modal id='YOUR_ID' isOpen={openModalId === 'YOUR_ID'}>
     <h1>Lorem Ipsum</h1>
     <p>Lorem Ipsum</p>
 </Modal>
@@ -112,7 +113,7 @@ Please write the tags you wish to display inside the Modal Component.
 The Modal requires a unique identifier "id".
 
 Pass the "id" created as a parameter to "isOpen".
-<br/><br/>
+<br/><br/><br/>
 
 ### 3) "useModal" Hook
 
@@ -137,7 +138,7 @@ Pass the "id" specified during the creation of the Modal as a parameter.
 <b>Setting Background Color</b>
 
 ```tsx
-handleBgColor('#fff');
+handleBgColor('COLOR_CODE');
 ```
 
 You can change the background color of the Modal Sheet as desired.
@@ -153,3 +154,12 @@ handleMaxSize(NUMBER);
 The Modal Sheet is implemented responsively by default, with a maximum width of 768px.
 
 If you wish to adjust the maximum width according to the requirements of your service, please use "handleMaxSize()".
+<br/><br/><br/>
+
+## 4. Video Usage Guide
+
+[![Video Label](http://img.youtube.com/vi/Fuq-ruvCQYg/0.jpg)](https://youtu.be/Fuq-ruvCQYg)
+<br/><br/>
+Thank you for reading.
+
+Happy Hacking!

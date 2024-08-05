@@ -1,3 +1,23 @@
+/* 모달 바깥을 감싸는 배경 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #000;
+    display: none; /* 기본적으로 표시하지 않음 */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.show {
+    display: block; /* 표시할 때 block으로 설정 */
+    opacity: 0.7;
+}
+
+/* 모달 시트 */
 .modal-sheet {
     position: fixed;
     z-index: 100;
@@ -12,29 +32,12 @@
     flex-direction: column;
     justify-content: center;
     transform: translate(-50%, -50%);
-    /* transform: translate(-50%, -45%) translateY(50px); */
-    transition: 0.3s ease-in-out;
-    /* transition: 5s ease-in-out; */
+    transition: opacity 0.3s ease-in-out;
 }
 
 .modal-sheet.show {
     opacity: 1;
     pointer-events: auto;
-    transform: translate(-50%, -50%) translateY(0);
-}
-
-/* 모달 바깥을 감싸는 배경 */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 98;
-    width: 1000%;
-    height: 1000%;
-    opacity: 0.7;
-    background: #000;
-    transform: translate(-50%, -50%);
-    transition: 0.3s ease-in-out;
 }
 
 .modal-content {
